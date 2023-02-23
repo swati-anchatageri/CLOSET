@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CLOSET</title>
+    <title>Products</title>
     <link rel="icon" type="image/x-icon" href="./2.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -26,6 +26,7 @@
         overflow: hidden;
         display: flex;
         align-items: center;
+        background-color: white;
         justify-content: space-between;
         height: 50px;
     
@@ -174,7 +175,7 @@
 .dropdown:hover .dropdown-content {display: block;}
 .dropdown:hover .dropbtn {background-color: #ffffff;}
 #footer{
-    padding-top: 20px;
+    padding-top: 40px;
 }
 
 /* .................footer dropdown  ...................*/
@@ -307,150 +308,132 @@
     gap: 20px;
     padding-top: 10px;
 }
+#container{
+    width: 60%;
+    display: flex;
+    margin: auto;
+    align-items: center;
+   
+}
+#container > div{
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-align: center;
+    padding: 10px;
+    padding-bottom: 10px;
+}
+#container > div >img{
+    width: 90%;
+    padding: 10px;
+}
+#container > div > button{
+display: block;
+margin: auto;
+margin-bottom: 10px;
+width: 150px;
+height: 30px;
+font-size: 16px;
+font-weight: bold;
+color: #ffffff;
+border: none;
+border-radius: 20px;
+background-color: #c31717;
+}
+#container > div > button:hover{
+    background-color: white;
+    color: #c31717;
+    border: solid #c31717 ;
+}
 </style>
 <body>
-
-        <div id="top-carousel">
-                <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                  <div class="carousel-inner">
-                    <div class="item active">
-                        <p style="width:100%;">TRACK YOUR ORDERS AND RETURNS HERE.</P>
-                    </div>
-                    <div class="item">
-                        <p style="width:100%;">ADDITIONAL 10% OFF SITE WIDE ON MINIMUM VALUE OF  ₹18000. USE CODE: EXTRA10.</P>
-                    </div>
-                  </div>
-                  <a  href="#myCarousel" data-slide="prev">
-                  </a>
-                  <a  href="#myCarousel" data-slide="next">
-                  </a>
-                </div>
-                      
+    <div id="top-carousel">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="item active">
+                <p style="width:100%;">TRACK YOUR ORDERS AND RETURNS HERE.</P>
+            </div>
+            <div class="item">
+                <p style="width:100%;">ADDITIONAL 10% OFF SITE WIDE ON MINIMUM VALUE OF  ₹18000. USE CODE: EXTRA10.</P>
+            </div>
+          </div>
+          <a  href="#myCarousel" data-slide="prev">
+          </a>
+          <a  href="#myCarousel" data-slide="next">
+          </a>
         </div>
-        <div id="nav">
-           <div id="cat">
-            <div class="dropdown">
-                <button class="dropbtn">MEN</button>
-                <div class="dropdown-content">
-                  <a href="./products.html">VIEW ALL</a>
-                  <a href="#">JEANS</a>
-                  <a href="#">APPAREL</a>
-                  <a href="#">SHOES</a>
-                  <a href="#">ACCESSORIES</a>
-                </div>
-              </div>
-              <div class="dropdown">
-                <button class="dropbtn">WOMEN</button>
-                <div class="dropdown-content">
-                  <a href="./products.html">VIEW ALL</a>
-                  <a href="#">JEANS</a>
-                  <a href="#">APPAREL</a>
-                  <a href="#">SHOES</a>
-                  <a href="#">ACCESSORIES</a>
-                </div>
-              </div>
-              <div class="dropdown">
-                <button class="dropbtn">KID</button>
-                <div class="dropdown-content">
-                  <a href="./products.html">VIEW ALL</a>
-                  <a href="#">JEANS</a>
-                  <a href="#">APPAREL</a>
-                </div>
-              </div>
-              <div class="dropdown">
-                <button id="ss" class="dropbtn">SS'23</button>
-                <div class="dropdown-content">
-                  <a href="/products.html">VIEW ALL</a>
-                  <a href="#">MEN</a>
-                  <a href="#">WOMEN</a>
-                </div>
-              </div>
-              <div class="dropdown">
-                <button class="dropbtn">SPORT</button>
-                <div class="dropdown-content">
-                  <a href="./products.html">VIEW ALL</a>
-                  <a href="#">MEN</a>
-                  <a href="#">WOMEN</a>
-                </div>
-              </div>
-              <div class="dropdown">
-                <button class="dropbtn">LAST CHANCE</button>
-                <div class="dropdown-content">
-                  <a href="#">VIEW ALL</a>
-                  <a href="#">MEN</a>
-                  <a href="#">WOMEN</a>
-                  <a href="#">KID</a>
-                </div>
-              </div>
-           </div>
-           <div id="title">
-            <h1 >CLOSET</h1>
-           </div>
-           <div id="opt">
-                <table id="opttable">
-                    <tr>
-                    <td> <a href=""><img src="./images/profile-people-account-svgrepo-com.svg" alt=""></a></td>
-                    <td> <a href=""><img src="./images/search-svgrepo-com.svg" alt=""></a></td>
-                    <td> <a href=""><img src="./images/question-mark-circled-svgrepo-com.svg" alt=""></a> </td>
-                    <td> <a href=""><img src="./images/heart-svgrepo-com.svg" alt=""></a> </td>
-                    <td> <a href=""><img src="./images/cart-2-svgrepo-com.svg" alt=""></a> </td>
-                    </tr>
-                </table>   
-            </div>
+    </div>
+<div id="nav">
+   <div id="cat">
+    <div class="dropdown">
+        <button class="dropbtn">MEN</button>
+        <div class="dropdown-content">
+          <a href="./products.html">VIEW ALL</a>
+          <a href="#">JEANS</a>
+          <a href="#">APPAREL</a>
+          <a href="#">SHOES</a>
+          <a href="#">ACCESSORIES</a>
         </div>
-        <div class="content">
-            <div id="new-launch">
-                <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                    </ol>
-                
-                    <div class="carousel-inner">
-
-                        <div class="item active">
-                        <a href="/products.html"><img src="./images/1.jpg" alt="Los Angeles" style="width:100%;height:500px;"></a>
-                        <div class="carousel-caption">
-                            <h2>New Generation of Denim</h2>
-                            <h4>Just Launched SS'23 Collectin</h4>
-                        <div id="but"> <button>DISCOVER MAN</button><button>DISCOVER WOMAN</button></div>
-                        </div>
-                        </div>
-                
-                        <div class="item">
-                        <a href="/products.html"><img src="./images/1.jpg" alt="Chicago" style="width:100%;height:500px;"></a>
-                        <div class="carousel-caption">
-                            <h2>New Generation of Denim</h2>
-                            <h4>Just Launched SS'23 Collectin</h4>
-                            <div id="but"><button>DISCOVER MAN</button><button>DISCOVER WOMAN</button></div>
-                        </div>
-                        </div>
-                    
-                        <div class="item">
-                        <a href="/products.html"><img src="./images/1.jpg" alt="New York" style="width:100%;height:500px;"></a>
-                        <div class="carousel-caption">
-                            <h2>New Generation of Denim</h2>
-                            <h4>Just Launched SS'23 Collectin</h4>
-                        <div id="but"> <button>DISCOVER MAN</button><button>DISCOVER WOMAN</button></div>
-                        </div>
-                        </div>
-                    
-                    </div>
-                    <a href="#myCarousel" data-slide="prev">
-                    </a>
-                    <a href="#myCarousel" data-slide="next">
-                    </a>
-                </div>
-            </div>
-            <div>
-                <p>most wanted</p>
-            </div>
-            <div>
-
-            </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">WOMEN</button>
+        <div class="dropdown-content">
+          <a href="./products.html">VIEW ALL</a>
+          <a href="#">JEANS</a>
+          <a href="#">APPAREL</a>
+          <a href="#">SHOES</a>
+          <a href="#">ACCESSORIES</a>
         </div>
-    
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">KID</button>
+        <div class="dropdown-content">
+          <a href="./products.html">VIEW ALL</a>
+          <a href="#">JEANS</a>
+          <a href="#">APPAREL</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button id="ss" class="dropbtn">SS'23</button>
+        <div class="dropdown-content">
+          <a href="/products.html">VIEW ALL</a>
+          <a href="#">MEN</a>
+          <a href="#">WOMEN</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">SPORT</button>
+        <div class="dropdown-content">
+          <a href="./products.html">VIEW ALL</a>
+          <a href="#">MEN</a>
+          <a href="#">WOMEN</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">LAST CHANCE</button>
+        <div class="dropdown-content">
+          <a href="#">VIEW ALL</a>
+          <a href="#">MEN</a>
+          <a href="#">WOMEN</a>
+          <a href="#">KID</a>
+        </div>
+      </div>
+   </div>
+   <div id="title">
+    <h1 >CLOSET</h1>
+   </div>
+   <div id="opt">
+        <table id="opttable">
+            <tr>
+            <td> <a href=""><img src="./images/profile-people-account-svgrepo-com.svg" alt=""></a></td>
+            <td> <a href=""><img src="./images/search-svgrepo-com.svg" alt=""></a></td>
+            <td> <a href=""><img src="./images/question-mark-circled-svgrepo-com.svg" alt=""></a> </td>
+            <td> <a href=""><img src="./images/heart-svgrepo-com.svg" alt=""></a> </td>
+            <td> <a href=""><img src="./images/cart-2-svgrepo-com.svg" alt=""></a> </td>
+            </tr>
+        </table>   
+    </div>
+</div>
+    <div id="container"></div>
 </body>
 <footer>
     <div id="footer">
@@ -530,8 +513,6 @@
         navbar.classList.remove("sticky");
       }
     }
-
-
 function myFunction1() {
  document.getElementById("foot-myDropdown").classList.toggle("show");
 }
@@ -547,7 +528,6 @@ window.onclick = function(event) {
     }
   }
 }
-
 function myFunction2() {
  document.getElementById("foot-myDropdown2").classList.toggle("show");
 }
@@ -563,7 +543,6 @@ window.onclick = function(event) {
     }
   }
 }
-
 function myFunction3() {
  document.getElementById("foot-myDropdown3").classList.toggle("show");
 }
@@ -579,5 +558,32 @@ window.onclick = function(event) {
     }
   }
 }
+
+    </script>
+    <script>
+        let prod=JSON.parse(localStorage.getItem("prod"))||[]
+        let prodcont = document.getElementById("container")
+        console.log(prod)
+        displayproduct(prod)
+        function displayproduct(data){
+            prodcont.innerHTML=""
+            let card = document.createElement("div")
+            let image =document.createElement("img")
+            let title = document.createElement("h3")
+            let price = document.createElement("h4")
+            let details=document.createElement("p")
+            let add = document.createElement("button")
+            let det = document.createElement("button")
+
+            image.setAttribute("src",data.img)
+            title.textContent=`${data.brand}  ${data.gender}'s ${data.category}`
+            price.textContent=`₹${data.price}`
+            details.textContent=data.details
+            add.textContent="Add To Cart"
+            det.textContent="View Details"
+            card.append(image,title,price,details,add,det)
+            prodcont.append(card)
+            
+        }
     </script>
 </html>
