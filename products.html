@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="icon" type="image/x-icon" href="./2.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    body{
+        padding: 0px;
+        margin: 0px;
+    }
+    #top-carousel{
+        background-color: red;
+    }
+    #nav{
+        width: 100%;
+        margin: auto;
+        padding: 10PX;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        background-color: white;
+        justify-content: space-between;
+        height: 50px;
+    
+    }
+    .sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.sticky + .content {
+  padding-top: 30px;
+}
+    #opt img{
+        width: 40px;
+        padding: 5px;
+        /* border: solid black; */
+    }
+    #opt{
+        display: flex;
+        margin-left: 250px;
+    }
+    #nav #cat{
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap:15px;
+
+    }
+    #sp{
+        display: inline;
+    }
+    #title{
+        display: inline;
+        margin-left: 100px;
+        
+    }
+    #title > h1{
+        font-size: 50px;
+        padding-bottom: 10px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: bolder;
+    }
+    #ss{
+        display: inline;
+        color: red;
+        border: solid red;
+    }
+    .logo{
+        width:25px;
+    }
+    *{
+        box-sizing: border-box;
+    }
+    #top-carousel p{
+        width: 100%;
+        padding-top: 5px;
+        background-color: red;
+        font-size: 16px;
+        height: 30px;
+        font-weight: lighter;
+        color: white;
+        text-align: center;
+    }
+    #opttable{
+        border-collapse: collapse;
+        border-color: black;
+    }
+    #new-launch{
+        width: 100%;
+        padding-top:20px ;
+    }
+    #but{
+        padding: 50px;
+    }
+    #new-launch div button{
+        padding: 0.8em 1.8em;
+        border: 2px solid #c31717;
+        position: relative;
+        overflow: hidden;
+        background-color: transparent;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 16px;
+        transition: .5s;
+        z-index: 1;
+        font-family: inherit;
+        color:white;
+    }
+    #new-launch div button::before {
+        content: '';
+        width: 0;
+        height: 300%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        background: #c31717;
+        transition: .5s ease;
+        display: block;
+        z-index: -1;
+        }
+
+ #new-launch div button:hover::before {
+ width: 105%;
+}
+
+#new-launch div button:hover {
+ color: white;
+}
+    #opttable, td, tr{
+        border: 2px solid;
+    }
+    .dropbtn {
+  background-color:white;
+  color:black;
+  padding-top: 15px;
+  font-size: 16px;
+  border: none;
+  font-weight: bold;
+}
+.dropdown {
+  position: static;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  width: 100%;
+  left: 0;
+  padding-top: 15px;
+  position: absolute;
+  background-color: #ffffff;
+  height: 45px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  display: inline;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+}
+#top-carousel .item{
+    height: 30px;
+}
+.dropdown-content a:hover {background-color: #ddd;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: #ffffff;}
+#footer{
+    padding-top: 40px;
+}
+
+/* .................footer dropdown  ...................*/
+.foot-dropbtn, .foot-dropbtn2,.foot-dropbtn3 {
+  background-color: #ffffff;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.foot-dropbtn:hover, .foot-dropbtn:focus {
+  background-color: #ffffff;
+}
+.foot-dropbtn2:hover, .foot-dropbtn2:focus {
+  background-color: #ffffff;
+}
+.foot-dropbtn3:hover, .foot-dropbtn3:focus {
+  background-color: #ffffff;
+}
+
+.foot-dropdown, .foot-dropdown2,.foot-dropdown2{
+  position: relative;
+  display: inline-block;
+}
+
+.foot-dropdown-content,.foot-dropdown-content2,.foot-dropdown-content3 {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+#footer-drop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.foot-dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.foot-dropdown-content2 a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.foot-dropdown-content3 a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.foot-dropdown a:hover {text-decoration: underline;}
+.foot-dropdown2 a:hover {text-decoration: underline;}
+.foot-dropdown3 a:hover {text-decoration: underline;}
+
+.show {display: block;}
+
+/* ........................ sign in and connect with us ........................... */
+#signin-connect-us{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+#signin{
+   
+    padding: 10px;
+    text-align: left;
+    color: white;
+    background-color: black;
+    
+}
+#signin div{
+    width: 60%;
+    background-color: black;
+    margin: auto;
+    padding: 10px;
+}
+#connect img{
+    width: 
+    50px;
+}
+#email{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+}
+#signup-btn{
+    width: 100%;
+    border: solid white;
+    color: white;
+    height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    background: black;
+}
+#signup-btn:hover{
+    background-color: white;
+    color: black;
+}
+#sign > h3{
+    padding-bottom: 10px;
+}
+
+#connect{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    display:flex;
+    padding: 10px;
+    margin: auto;
+    background-color: #EEEEEE;
+}
+#conn > div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 10px;
+}
+#container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:20px
+}
+#container > div{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 10px;
+    padding-bottom: 10px;
+    background-color: #ECEFF1;
+}
+#container > div >img{
+    width: 100%;
+    height: 300px;
+    padding: 10px;
+}
+#container > div > button{
+display: block;
+margin: auto;
+margin-bottom: 10px;
+width: 150px;
+height: 30px;
+font-size: 16px;
+font-weight: bold;
+color: #ffffff;
+border: none;
+border-radius: 20px;
+background-color: #c31717;
+}
+#container > div > button:hover{
+    background-color: white;
+    color: #c31717;
+    border: solid #c31717 ;
+}
+</style>
+<body>
+    <div id="top-carousel">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="item active">
+                <p style="width:100%;">TRACK YOUR ORDERS AND RETURNS HERE.</P>
+            </div>
+            <div class="item">
+                <p style="width:100%;">ADDITIONAL 10% OFF SITE WIDE ON MINIMUM VALUE OF  ₹18000. USE CODE: EXTRA10.</P>
+            </div>
+          </div>
+          <a  href="#myCarousel" data-slide="prev">
+          </a>
+          <a  href="#myCarousel" data-slide="next">
+          </a>
+        </div>
+    </div>
+<div id="nav">
+   <div id="cat">
+    <div class="dropdown">
+        <button class="dropbtn">MEN</button>
+        <div class="dropdown-content">
+          <a href="./products.html">VIEW ALL</a>
+          <a href="#">JEANS</a>
+          <a href="#">APPAREL</a>
+          <a href="#">SHOES</a>
+          <a href="#">ACCESSORIES</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">WOMEN</button>
+        <div class="dropdown-content">
+          <a href="./products.html">VIEW ALL</a>
+          <a href="#">JEANS</a>
+          <a href="#">APPAREL</a>
+          <a href="#">SHOES</a>
+          <a href="#">ACCESSORIES</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">KID</button>
+        <div class="dropdown-content">
+          <a href="./products.html">VIEW ALL</a>
+          <a href="#">JEANS</a>
+          <a href="#">APPAREL</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button id="ss" class="dropbtn">SS'23</button>
+        <div class="dropdown-content">
+          <a href="/products.html">VIEW ALL</a>
+          <a href="#">MEN</a>
+          <a href="#">WOMEN</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">SPORT</button>
+        <div class="dropdown-content">
+          <a href="./products.html">VIEW ALL</a>
+          <a href="#">MEN</a>
+          <a href="#">WOMEN</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">LAST CHANCE</button>
+        <div class="dropdown-content">
+          <a href="#">VIEW ALL</a>
+          <a href="#">MEN</a>
+          <a href="#">WOMEN</a>
+          <a href="#">KID</a>
+        </div>
+      </div>
+   </div>
+   <div id="title">
+    <h1 >CLOSET</h1>
+   </div>
+   <div id="opt">
+        <table id="opttable">
+            <tr>
+            <td> <a href=""><img src="./images/profile-people-account-svgrepo-com.svg" alt=""></a></td>
+            <td> <a href=""><img src="./images/search-svgrepo-com.svg" alt=""></a></td>
+            <td> <a href=""><img src="./images/question-mark-circled-svgrepo-com.svg" alt=""></a> </td>
+            <td> <a href=""><img src="./images/heart-svgrepo-com.svg" alt=""></a> </td>
+            <td> <a href=""><img src="./images/cart-2-svgrepo-com.svg" alt=""></a> </td>
+            </tr>
+        </table>   
+    </div>
+</div>
+    <button id="search">Search</button>
+    <div id="container"></div>
+</body>
+<footer>
+    <div id="footer">
+        <div id="signin-connect-us">
+            <div id="signin">
+                <div id="sign">
+                    <h3>Signup to Never Miss an Update</h3>
+                <input type="emai" placeholder="Enter your Email-Id" id="email" required><br>
+                <input type="radio" id="male" name="fav_language" value="MALE">
+                <label for="html">MALE</label>
+                <input type="radio" id="female" name="fav_language" value="FEMALE">
+                <label for="css">FEMALE</label><br>
+                <p style="font-size: 11px;padding-top: 15px;padding-bottom: 15px;">By clicking Sign up you have read and agreed to our <a style="text-decoration: underline;color: white;" href="">privacy policy</a></p>
+                <button id="signup-btn">SIGNUP</button>
+                </div>
+            </div>
+            <div id="connect">
+                <div id="conn">
+                    <h3>Connect With Us On Social Media</h3>
+                    <div>
+                        <img src="./images/instagram-svgrepo-com.svg" alt="">
+                        <img src="./images/facebook-svgrepo-com.svg" alt="">
+                        <img src="./images/youtube-svgrepo-com.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer-drop">
+            <div class="foot-dropdown">
+                <button onclick="myFunction1()" class="foot-dropbtn">HELP <i class="fa fa-caret-down"></i></button>
+               
+                <div id="foot-myDropdown" class="foot-dropdown-content">
+                    <a href="#home">Order Status</a>
+                    <a href="#about">Delivery</a>
+                    <a href="#contact">Returns</a>
+                    <a href="#contact">Contact Us</a>
+                    <a href="#contact">View All</a>
+                </div>
+            </div>
+            <div class="foot-dropdown2">
+                <button onclick="myFunction2()" class="foot-dropbtn2">COOKIE POLICY & TERMS <i class="fa fa-caret-down"></i></button>
+               
+                <div id="foot-myDropdown2" class="foot-dropdown-content2">
+                    <a href="#home">Privacy Policy</a>
+                    <a href="#about">Shipping & Delivery Policy</a>
+                    <a href="#contact">Terms & Conditions</a>
+                    <a href="#contact">Returns & Refund Policy</a>
+                    <a href="#contact">Fees & Payment Policy </a>
+                </div>
+            </div>
+            <div class="foot-dropdown3">
+                <button onclick="myFunction3()" class="foot-dropbtn3">WORLD OF CLOSET<i class="fa fa-caret-down"></i></button>
+               
+                <div id="foot-myDropdown3" class="foot-dropdown-content3">
+                    <a href="#home">About Closet</a>
+                    <a href="#about">For Responsible Living</a>
+                    <a href="#contact">Only the Brave Foundation</a>
+                </div>
+            </div>
+            <div class="foot-dropdown4">
+                <button class="foot-dropbtn">STORE LOCATOR</button>
+            </div>
+        </div>
+        <p>Copyright ©️2021 Diesel Fashion India Reliance Pvt.Ltd</p>
+    </div>
+</footer>
+<script>
+    window.onscroll = function() {mySticky()};
+    
+    var navbar = document.getElementById("nav");
+    var sticky = navbar.offsetTop;
+    
+    function mySticky() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+function myFunction1() {
+ document.getElementById("foot-myDropdown").classList.toggle("show");
+}
+window.onclick = function(event) {
+  if (!event.target.matches('.foot-dropbtn')) {
+    var dropdowns = document.getElementsByClassName("foot-dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+function myFunction2() {
+ document.getElementById("foot-myDropdown2").classList.toggle("show");
+}
+window.onclick = function(event) {
+  if (!event.target.matches('.foot-dropbtn2')) {
+    var dropdowns = document.getElementsByClassName("foot-dropdown-content2");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+function myFunction3() {
+ document.getElementById("foot-myDropdown3").classList.toggle("show");
+}
+window.onclick = function(event) {
+  if (!event.target.matches('.foot-dropbtn3')) {
+    var dropdowns = document.getElementsByClassName("foot-dropdown-content3");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+    </script>
+    <script>
+        let products=[
+            {
+                id:1,
+                category:"T-shirt",
+                brand:"Polo",
+                price:700,
+                img:"https://images.tailorstore.com/YToyOntzOjU6IndpZHRoIjtpOjExNTI7czo2OiJoZWlnaHQiO2I6MDt9/images/catalog/tailor-store-short-deep-blue-1.jpg",
+                gender:"men",
+                details:"Men Blue Brand Logo Print Detail Sustainable T-shir"
+            },
+            {
+                id:2,
+                category:"T-shirt",
+                brand:"Adidas",
+                price:1500,
+                img:"https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/14790090/2021/8/31/6db74ba1-8ae5-4698-8ffd-946023446b7e1630394167962-ADIDAS-Men-Tshirts-4931630394167453-1.jpg",
+                gender:"men",
+                details:"Men Black Brand Logo Print Detail Sustainable T-shirt"
+            },
+            {
+                id:3,
+                category:"Jeans",
+                brand:"Levis",
+                price:2999,
+                img:"https://n.nordstrommedia.com/id/sr3/eec906a8-5894-4829-a46b-8cfe11352216.jpeg?h=365&w=240&dpr=2",
+                gender:"men",
+                details:"Men Regular Mid Rise Blue Jeans"
+            },
+            {
+                id:4,
+                category:"Jeans",
+                brand:"SuperDry",
+                price:5999,
+                img:"https://rukminim1.flixcart.com/image/832/832/jmthle80-1/jean/f/t/x/32-m70mj015f3-superdry-original-imaf9ngadbgsxfz4.jpeg?q=70",
+                gender:"men",
+                details:"Men Regular Mid Rise Blue Jeans"
+            },
+            {
+                id:5,
+                category:"Formal shirt",
+                brand:"Levis",
+                price:3999,
+                img:"https://i.pinimg.com/originals/c6/d0/80/c6d08099c8fff15da918188972ae20a6.jpg",
+                gender:"men",
+                details:"Levis Pure Cotton Sky Blue Denim Shirt"
+            },
+            {
+                id:6,
+                category:"Formal shirt",
+                brand:"Raymonds",
+                price:2499,
+                img:"https://assets.ajio.com/medias/sys_master/root/heb/hc9/17076287537182/-473Wx593H-461048010-white-MODEL.jpg",
+                gender:"men",
+                details:"RAYMOND Solid Shirt"
+            },
+            {
+                id:7,
+                category:"Shoe",
+                brand:"Levis",
+                price:2399,
+                img:"https://www.shutterstock.com/image-photo/flying-yellow-leather-womens-sneaker-260nw-1982900573.jpg",
+                gender:"men",
+                details:"Very comfy shoes"
+            },
+            {
+                id:8,
+                category:"shoe",
+                brand:"Bata",
+                price:2599,
+                img:"https://cdn.pixabay.com/photo/2016/11/19/18/06/feet-1840619__340.jpg",
+                gender:"men",
+                details:"Men's attractive running shoes"
+            },
+            {
+                id:9,
+                category:"T-shirt",
+                brand:"Roadster",
+                price:999,
+                img:"https://cdn.pixabay.com/photo/2013/11/28/11/29/t-shirt-220192__340.jpg",
+                gender:"women",
+                details:"Compy black t shirt for women"
+            },
+            {
+                id:10,
+                category:"T-shirt",
+                brand:"Levis",
+                price:1599,
+                img:"https://cdn.pixabay.com/photo/2020/06/05/15/21/yellow-5263498__340.jpg",
+                gender:"women",
+                details:"Comfy t-shirt for women"
+            },
+            {
+                id:11,
+                category:"Jeans",
+                brand:"Ether",
+                price:3999,
+                img:"https://media.istockphoto.com/id/1187616983/photo/model-of-a-young-beautiful-woman-in-a-fashion-trench-coat-in-a-stylish-knitted-sweater-with-a.jpg?s=612x612&w=0&k=20&c=BTkNUriMdXwrW9IK1xWdTfi-yKtJzjibI2Cm-2wzhVU=",
+                gender:"women",
+                details:"Comfy blue jeans foe women"
+            },
+            {
+                id:12,
+                category:"Jeans",
+                brand:"Levis",
+                price:3499,
+                img:"https://media.istockphoto.com/id/875961764/photo/happy-girl-with-curly-brown-hair-jumping-in-the-city.jpg?s=612x612&w=0&k=20&c=zH9o_7f7vJ53UU1nmCvxLn4O6wS7qCrBodyVggQcZI0=",
+                gender:"women",
+                details:"Comfy blue jeans for women"
+            },
+            {
+                id:13,
+                category:"Kurti",
+                brand:"W",
+                price:2199,
+                img:"https://assets.myntassets.com/fl_progressive/h_960,q_80,w_720/v1/assets/images/2526076/2018/3/9/11520583817821-GERUA-Women-Kurtas-5741520583817647-1.jpg",
+                gender:"women",
+                details:"Kurta for women for both formal and casual wear"
+            },
+            {
+                id:14,
+                category:"Kurti",
+                brand:"Levis",
+                price:2999,
+                img:"https://absolutelydesi.com/wp-content/uploads/2022/09/Varanga-Women-Mauve-Silver-Embroidered-Mirror-Work-Kurta-with-Trousers-Dupatta-1-600x900.jpg",
+                gender:"women",
+                details:"Treditional Indian design kurti"
+            },
+            {
+                id:15,
+                category:"Top",
+                brand:"FabAlley",
+                price:1999,
+                img:"https://img.faballey.com/images/Product/TOP06080Z/1.jpg",
+                gender:"women",
+                details:"Maroon women gorgious top "
+            },
+            {
+                id:16,
+                category:"Top",
+                brand:"Kiara",
+                price:1599,
+                img:"https://i.pinimg.com/236x/52/3b/aa/523baac938576c5e600276a58a746756.jpg",
+                gender:"women",
+                details:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium, cum?"
+            },
+            {
+                id:17,
+                category:"Jeans",
+                brand:"Levis",
+                price:1999,
+                img:"https://i.pinimg.com/736x/a5/38/66/a538664c1a0ed86f71dbf68ad57e4c4e.jpg",
+                gender:"kid",
+                details:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium, cum?"
+            },
+            {
+                id:18,
+                category:"Top",
+                brand:"FirstCry",
+                price:999,
+                img:"https://i.pinimg.com/736x/88/a1/6d/88a16d507ad81acacb8cb840c1f0a552.jpg",
+                gender:"kid",
+                details:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium, cum?"
+            },
+            {
+                id:19,
+                category:"Treditional",
+                brand:"Varanga",
+                price:3999,
+                img:"https://i.pinimg.com/236x/b8/d7/14/b8d71432d2fe02e55ec0cfe7c9c16199--indian-dresses-indian-clothes.jpg",
+                gender:"kid",
+                details:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium, cum?"
+            },
+            {
+                id:20,
+                category:"Treditional",
+                brand:"W",
+                price:2999,
+                img:"https://i.pinimg.com/236x/48/f8/98/48f8985ee810ede347cd9fd191294105.jpg",
+                gender:"kid",
+                details:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium, cum?"
+            }
+        ]
+        let prod=JSON.parse(localStorage.getItem("prod"))||[]
+        console.log(products)
+        let prodcont = document.getElementById("container")
+        displayproduct(products)
+        function displayproduct(data){
+            prodcont.innerHTML=""
+            data.forEach(element => {
+                let card = document.createElement("div")
+            let image =document.createElement("img")
+            let title = document.createElement("h3")
+            let price = document.createElement("h4")
+            let details=document.createElement("p")
+            let add = document.createElement("button")
+            let det = document.createElement("button")
+
+            image.setAttribute("src",element.img)
+            title.textContent=`${element.brand}  ${element.gender}'s ${element.category}`
+            price.textContent=`₹${element.price}`
+            details.textContent=element.details
+            add.textContent="Add To Cart"
+            det.textContent="View Details"
+                image.addEventListener("click",()=>{
+                    prod = element
+                    localStorage.setItem("prod",JSON.stringify(prod))
+                    window.location.href="./prod.html"
+                })
+            card.append(image,title,price,details,add,det)
+            prodcont.append(card)
+            });
+        }
+    </script>
+</html>
