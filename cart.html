@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products</title>
+    <title>CART</title>
     <link rel="icon" type="image/x-icon" href="./2.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
-<style>
-    body{
+    <style>
+        body{
         padding: 0px;
         margin: 0px;
     }
@@ -23,13 +22,13 @@
         width: 100%;
         margin: auto;
         padding: 10PX;
+        margin-top: 10px;
         overflow: hidden;
         display: flex;
         align-items: center;
-        background-color: white;
         justify-content: space-between;
         height: 50px;
-    
+       background-color: white;
     }
     .sticky {
   position: fixed;
@@ -73,6 +72,14 @@
         display: inline;
         color: red;
         border: solid red;
+    }
+    #title{
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    #title > img{
+      width: 20%;
     }
     .logo{
         width:25px;
@@ -175,7 +182,7 @@
 .dropdown:hover .dropdown-content {display: block;}
 .dropdown:hover .dropbtn {background-color: #ffffff;}
 #footer{
-    padding-top: 40px;
+    padding-top: 20px;
 }
 
 /* .................footer dropdown  ...................*/
@@ -309,59 +316,149 @@
     padding-top: 10px;
 }
 #container{
-    width: 60%;
-    display: flex;
-    margin: auto;
-    align-items: center;
-   
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
 }
-#container > div{
-    width: 100%;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    text-align: center;
-    padding: 10px;
-    padding-bottom: 10px;
+#container > #total > h3{
+    font-weight: bold;
 }
-#container > div >img{
-    width: 90%;
-    padding: 10px;
-}
-#container > div > button{
-display: block;
+#cart-container{
+width: 100%;
 margin: auto;
-margin-bottom: 10px;
-width: 150px;
-height: 30px;
-font-size: 16px;
-font-weight: bold;
-color: #ffffff;
+display: grid;
+grid-template-columns: repeat(2,2fr);
+box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+padding: 10px;
+gap: 20px;
+
+flex-direction: column;
+row-gap: 10px;
+justify-content: space-around;
+}
+#cart-container > div{
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#cart-container > div > img{
+width: 30%;
+}
+#cart-container > div > button{
 border: none;
-border-radius: 20px;
-background-color: #c31717;
+background-color: white;
+color: blue;
 }
-#container > div > button:hover{
+#total > #cpn{
+width: 300px;
+height: 30px;
+font-size: 18px;
+font-weight: bold;
+color: red;
+border-radius: 5px;
+border: solid black;
+margin-bottom: 20px;
+}
+#total > #cpnbtn{
+    border: none;
+    background-color: #304FFE;
+    color: white;
+    width: 100px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    height: 30px;
+    margin-bottom: 20px;
+}
+#total > #cpnbtn:hover{
+border: solid #304FFE;
+color: #304FFE;
+background-color: white;
+}
+#cpn-list{
+    font-size: 18px;
+    font-weight: bold;
+}
+#cpn-list > img{
+    width: 40px;
+    margin-right: 20px;
+}
+#total > div > h5{
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+#total > div{
+    width: 70%;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    padding: 10px;
+    /* margin: auto; */
+}
+.detail{
+    width: 300px;
+    height: 100px;
+    border: solid white;
+    text-align: left;
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    margin-bottom: 20px;
+}
+.detail,tr,td{
+    border: none;
+}
+#total{
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+#payment{
+    border: none;
+    display: block;
+    margin: auto;
+    background-color: #304FFE;
+    color: white;
+    width: 200px;
+    height: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+#payment:hover{
     background-color: white;
-    color: #c31717;
-    border: solid #c31717 ;
+    border: solid #304FFE;
+    color: #304FFE;
 }
-</style>
+#cap{
+    font-weight: bold;
+    color: #263238;
+    margin-left: 10px;
+    padding-left: 20px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+#total > h4{
+    font-weight: bold;
+} 
+    </style>
+</head>
 <body>
     <div id="top-carousel">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="item active">
-              <p style="width:100%;">SHOP ON SITE GET AMAZING DISCOUNTS.</P>
-          </div>
-          <div class="item">
-              <p style="width:100%;">ADDITIONAL 10% OFF SITE WIDE ON MINIMUM VALUE OF  ₹1500. USE CODE: Extra10.</P>
-          </div>
+                <p style="width:100%;">SHOP ON SITE GET AMAZING DISCOUNTS.</P>
+            </div>
+            <div class="item">
+                <p style="width:100%;">ADDITIONAL 10% OFF SITE WIDE ON MINIMUM VALUE OF  ₹1500. USE CODE: Extra10.</P>
+            </div>
           </div>
           <a  href="#myCarousel" data-slide="prev">
           </a>
           <a  href="#myCarousel" data-slide="next">
           </a>
         </div>
-    </div>
+              
+</div>
 <div id="nav">
    <div id="cat">
     <div class="dropdown">
@@ -419,6 +516,7 @@ background-color: #c31717;
       </div>
    </div>
    <div id="title">
+    <img src="./2.png" alt="">
     <h1 >CLOSET</h1>
    </div>
    <div id="opt">
@@ -433,34 +531,33 @@ background-color: #c31717;
         </table>   
     </div>
 </div>
-    <div id="container"></div>
+<h2 id="cap">Cart</h2>
+<div id="container">
+   
+<div id="cart-container"></div>
+<div id="total">
+    <h3>Total Cart Value : <span id="cart-total"></span></h3>
+    <h4>Total Products : <span id="tot-prod"></span> </h4>
+    <input type="text" placeholder="Enter coupen code" id="cpn">
+    <button id="cpnbtn">Apply</button>
+    <ul id="cpn-list"><img src="./images/discount-price-sale-svgrepo-com.svg" alt=""> Available coupons
+        <li>New30</li>
+        <li>Extra10</li>
+    </ul>
+    <div>
+        <h5>Cart Details</h5>
+        <table class="detail">
+            <tr><td>Total Cart Value : </td><td id="total-bag"></td></tr>
+            <tr><td>Discount on Cart : </td><td id="discount">0</td></tr>
+            <tr><td>Total Amount</td><td id="total-amt"></td></tr>
+        </table>
+        <button id="payment">Make Payment</button>
+    </div>
+</div>
+</div>
 </body>
 <footer>
     <div id="footer">
-        <div id="signin-connect-us">
-            <div id="signin">
-                <div id="sign">
-                    <h3>Signup to Never Miss an Update</h3>
-                <input type="emai" placeholder="Enter your Email-Id" id="email" required><br>
-                <input type="radio" id="male" name="fav_language" value="MALE">
-                <label for="html">MALE</label>
-                <input type="radio" id="female" name="fav_language" value="FEMALE">
-                <label for="css">FEMALE</label><br>
-                <p style="font-size: 11px;padding-top: 15px;padding-bottom: 15px;">By clicking Sign up you have read and agreed to our <a style="text-decoration: underline;color: white;" href="">privacy policy</a></p>
-                <button id="signup-btn">SIGNUP</button>
-                </div>
-            </div>
-            <div id="connect">
-                <div id="conn">
-                    <h3>Connect With Us On Social Media</h3>
-                    <div>
-                        <img src="./images/instagram-svgrepo-com.svg" alt="">
-                        <img src="./images/facebook-svgrepo-com.svg" alt="">
-                        <img src="./images/youtube-svgrepo-com.svg" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
         <div id="footer-drop">
             <div class="foot-dropdown">
                 <button onclick="myFunction1()" class="foot-dropbtn">HELP <i class="fa fa-caret-down"></i></button>
@@ -501,106 +598,85 @@ background-color: #c31717;
     </div>
 </footer>
 <script>
-    window.onscroll = function() {mySticky()};
-    
-    var navbar = document.getElementById("nav");
-    var sticky = navbar.offsetTop;
-    
-    function mySticky() {
-      if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky")
-      } else {
-        navbar.classList.remove("sticky");
-      }
-    }
-function myFunction1() {
- document.getElementById("foot-myDropdown").classList.toggle("show");
-}
-window.onclick = function(event) {
-  if (!event.target.matches('.foot-dropbtn')) {
-    var dropdowns = document.getElementsByClassName("foot-dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-function myFunction2() {
- document.getElementById("foot-myDropdown2").classList.toggle("show");
-}
-window.onclick = function(event) {
-  if (!event.target.matches('.foot-dropbtn2')) {
-    var dropdowns = document.getElementsByClassName("foot-dropdown-content2");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-function myFunction3() {
- document.getElementById("foot-myDropdown3").classList.toggle("show");
-}
-window.onclick = function(event) {
-  if (!event.target.matches('.foot-dropbtn3')) {
-    var dropdowns = document.getElementsByClassName("foot-dropdown-content3");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
+     let cart = JSON.parse(localStorage.getItem("cart"))||[]
+    let cartCont = document.getElementById("cart-container")
+    let amount=0
+    function displayProduct(){
+      cartCont.innerHTML=""
+      cart.forEach((ele)=> {
+        let card = document.createElement("div")
+        let details = document.createElement("div")
+        let image =document.createElement("img")
+        let title = document.createElement("h3")
+        let price = document.createElement("h4")
+        let remove = document.createElement("button")
+        let inc = document.createElement("button")
+        inc.style.backgroundColor='white';
+        inc.style.cssText='color:blue'
+        let dec = document.createElement("button")
+        let qty = document.createElement("span")
+        image.setAttribute("src",ele.img)
+        title.textContent=`${ele.brand}  ${ele.gender}'s ${ele.category}`
+        price.textContent=`₹${ele.price}`
+        qty.textContent=ele.qty
+        remove.textContent="Remove"
+        inc.textContent="+"
+        dec.textContent="-"
 
-    </script>
-    <script>
-        let prod=JSON.parse(localStorage.getItem("prod"))||[]
-        let cart = JSON.parse(localStorage.getItem("cart"))||[]
-        let prodcont = document.getElementById("container")
-        console.log(prod)
-        displayproduct(prod)
-        function displayproduct(data){
-            prodcont.innerHTML=""
-            let card = document.createElement("div")
-            let image =document.createElement("img")
-            let title = document.createElement("h3")
-            let price = document.createElement("h4")
-            let details=document.createElement("p")
-            let add = document.createElement("button")
-
-            image.setAttribute("src",data.img)
-            title.textContent=`${data.brand}  ${data.gender}'s ${data.category}`
-            price.textContent=`₹${data.price}`
-            details.textContent=data.details
-            add.textContent="Add To Cart"
-            add.addEventListener("click",()=>{
-                    if(checkDuplicate(data)){
-                          alert("Product Already in Cart")
-                    }else{
-                        cart.push({...data,qty:1})
-                        localStorage.setItem("cart",JSON.stringify(cart))
-                        alert("Product Added To Cart")
-                      }
-                })
-            card.append(image,title,price,details,add)
-            prodcont.append(card)
-            
+        remove.addEventListener("click" , ()=>{
+         cart=cart.filter((prod)=>{
+          return prod.id!==ele.id
+         });
+         localStorage.setItem("cart",JSON.stringify(cart))
+         displayProduct() 
+        });
+        inc.addEventListener("click", ()=>{
+          ele=ele.qty++
+          localStorage.setItem("cart",JSON.stringify(cart))
+         displayProduct() 
+        });
+        dec.addEventListener("click", ()=>{
+          if(ele.qty>1){
+          ele=ele.qty--
+          localStorage.setItem("cart",JSON.stringify(cart))
+         displayProduct() 
+          }
+        });
+        let sum=0
+        for(let i=0;i<cart.length;i++){
+          sum+=cart[i].qty*cart[i].price
         }
-
-        function checkDuplicate(element){
-      for(let i=0;i<cart.length;i++){
-        if(cart[i].id==element.id){
-          return true
-        }
-      }
-      return false 
+        amount=sum
+        document.getElementById("cart-total").innerText=sum
+        document.getElementById("total-bag").innerText=sum
+        document.getElementById("total-amt").innerText=sum
+        document.getElementById("tot-prod").innerText=cart.length
+        card.append(image)
+       details.append(title,price,inc,qty,dec,remove)
+       cartCont.append(card,details)
+      });
     }
-    </script>
+    displayProduct()
+    let count=1
+    let cpn = document.getElementById("cpn")
+    let cpnbtn = document.getElementById("cpnbtn")
+    cpnbtn.addEventListener("click",()=>{
+        if(cpn.value=="New30" && count==1){
+        document.getElementById("cart-total").innerText=Math.floor(amount*0.7)
+        document.getElementById("discount").textContent=Math.floor(amount*0.3)
+        document.getElementById("total-amt").textContent=Math.floor(amount*0.7)
+    }else if(cpn.value=="Extra10" && count==1){
+        document.getElementById("cart-total").innerText=Math.floor(amount*0.9)
+        document.getElementById("discount").textContent=Math.floor(amount*0.1)
+        document.getElementById("total-amt").textContent=Math.floor(amount*0.9)
+    }else{
+        document.getElementById("cart-total").innerText=amount
+        document.getElementById("discount").textContent=amount*0
+        document.getElementById("total-amt").textContent=amount
+    }
+    })
+    document.getElementById("payment").addEventListener("click",()=>{
+        window.location.href="./checkout.html"
+    })
+</script>
 </html>
