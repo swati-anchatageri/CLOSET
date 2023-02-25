@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHECKOUT</title>
+    <link rel="icon" type="image/x-icon" href="./2.png">
+    <style>
+        #payment > img{
+            width: 50px;
+        }
+        #payment{
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            margin-top: 50px;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+            padding-bottom: 20px;
+        }
+        button{
+            border: none;
+            border-radius: 5px;
+            width: 200px;
+            height: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            background-color: rgb(209, 15, 32);
+            color: white;
+        }
+        button:hover{
+            background-color: white;
+            color: rgb(209, 15, 32);
+            border: solid rgb(209, 15, 32);
+
+        }
+    </style>
+</head>
+<body>
+    <div id="payment">
+        <h2>Payment Successful</h2>
+        <img src="./images/flash-payment-svgrepo-com.svg" alt="">
+        <h3>Thank you for Shopping</h3>
+   
+    <div><button>Continue Shopping</button></div>
+</div>
+</body>
+<script>
+    let btn = document.querySelector("button")
+    btn.addEventListener("click",()=>{
+        window.location.href="./products.html"
+    })
+</script>
+</html>
