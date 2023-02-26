@@ -318,7 +318,8 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    gap:20px
+    gap:20px;
+    margin-top: 20px;
 }
 #container > div{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -349,6 +350,21 @@ background-color: #c31717;
     color: #c31717;
     border: solid #c31717 ;
 }
+#spn{
+    font-size: 12px;
+    font-weight: bold;
+    color: #c31717;
+  }
+  #selgen{
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 200px;
+    height: 30px;
+    font-size: 18px;
+    font-weight: bold;
+  }
 </style>
 <body>
     <div id="top-carousel">
@@ -428,9 +444,10 @@ background-color: #c31717;
     <h1 >CLOSET</h1>
    </div>
    <div id="opt">
+    <span id="spn">Logout</span>
         <table id="opttable">
             <tr>
-            <td> <a href=""><img src="./images/profile-people-account-svgrepo-com.svg" alt=""></a></td>
+            <td> <a href="./index.html"><img src="./images/profile-people-account-svgrepo-com.svg" alt=""></a></td>
             <td> <a href=""><img src="./images/search-svgrepo-com.svg" alt=""></a></td>
             <td> <a href=""><img src="./images/question-mark-circled-svgrepo-com.svg" alt=""></a> </td>
             <td> <a href=""><img src="./images/heart-svgrepo-com.svg" alt=""></a> </td>
@@ -438,6 +455,14 @@ background-color: #c31717;
             </tr>
         </table>   
     </div>
+</div>
+<div id="sel">
+  <select id="selgen">
+    <option value="">ALL</option>
+    <option value="men">MEN</option>
+    <option value="women">WOMEN</option>
+    <option value="kid">KIDS</option>
+  </select>
 </div>
 <div id="container"></div>
 </body>
@@ -503,7 +528,7 @@ background-color: #c31717;
                 <button class="foot-dropbtn">STORE LOCATOR</button>
             </div>
         </div>
-        <p>Copyright ©️2021 Diesel Fashion India Reliance Pvt.Ltd</p>
+        <p>Copyright ©️2023 CLOSET Fashion India.</p>
     </div>
 </footer>
 <script>
@@ -753,6 +778,18 @@ window.onclick = function(event) {
         let cart = JSON.parse(localStorage.getItem("cart"))||[]
         console.log(products)
         let prodcont = document.getElementById("container")
+
+        let filterby = document.getElementById("selgen")
+        filterby.addEventListener("change",()=>{
+          if(filterby.value==""){
+            displayproduct(products)
+          }else{
+            data=products.filter((ele)=>{
+              return filterby.value==ele.gender
+            })
+            displayproduct(data)
+          }
+        })
         displayproduct(products)
         function displayproduct(data){
           prodcont.innerHTML=""

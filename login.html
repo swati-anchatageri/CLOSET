@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CART</title>
+    <title>Login</title>
     <link rel="icon" type="image/x-icon" href="./2.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <style>
-        body{
+</head>
+<style>
+     body{
         padding: 0px;
         margin: 0px;
     }
@@ -22,13 +23,22 @@
         width: 100%;
         margin: auto;
         padding: 10PX;
-        margin-top: 10px;
         overflow: hidden;
         display: flex;
         align-items: center;
+        background-color: white;
         justify-content: space-between;
         height: 50px;
-       background-color: white;
+    
+    }
+    #title{
+      display: flex;
+      align-items: center;
+      margin-left: 100px;
+      gap: 20px;
+    }
+    #title > img{
+      width: 20%;
     }
     .sticky {
   position: fixed;
@@ -57,13 +67,10 @@
     #sp{
         display: inline;
     }
-    #title{
-        display: inline;
-        margin-left: 100px;
-        
-    }
+   
     #title > h1{
         font-size: 50px;
+        
         padding-bottom: 10px;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         font-weight: bolder;
@@ -72,14 +79,6 @@
         display: inline;
         color: red;
         border: solid red;
-    }
-    #title{
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-    #title > img{
-      width: 20%;
     }
     .logo{
         width:25px;
@@ -182,10 +181,8 @@
 .dropdown:hover .dropdown-content {display: block;}
 .dropdown:hover .dropbtn {background-color: #ffffff;}
 #footer{
-    padding-top: 20px;
+    padding-top: 40px;
 }
-
-/* .................footer dropdown  ...................*/
 .foot-dropbtn, .foot-dropbtn2,.foot-dropbtn3 {
   background-color: #ffffff;
   color: black;
@@ -296,7 +293,6 @@
 #sign > h3{
     padding-bottom: 10px;
 }
-
 #connect{
     width: 100%;
     align-items: center;
@@ -315,180 +311,85 @@
     gap: 20px;
     padding-top: 10px;
 }
-#container{
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(2,2fr);
+body{
+    text-align: center;
 }
-#container > #total > h3{
-    font-weight: bold;
-}
-#cart-container{
-width: 100%;
-/* margin: auto; */
-display: grid;
-grid-template-columns: repeat(2,1fr);
-box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-padding: 10px;
-gap: 20px;
-flex-direction: column;
-row-gap: 10px;
-align-items: start;
-justify-content: start;
-}
-#cart-container > div{
-    width: 100%;
+#login{
+    width: 40%;
     margin: auto;
-    padding: 10px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-top: 70px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    height: 150px;
+    justify-content: space-around;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 }
-#cart-container > div > img{
-width: 30%;
-}
-#cart-container > div > button{
-border: none;
-background-color: white;
-height: 20px;
-font-size: 14px;
-font-weight: bold;
-color: rgb(252, 16, 4);
-}
-#total > #cpn{
-width: 300px;
-height: 30px;
-font-size: 18px;
-font-weight: bold;
-color: red;
-border-radius: 5px;
-border: solid black;
-margin-bottom: 20px;
-}
-#total > #cpnbtn{
-    border: none;
-    background-color: #304FFE;
-    color: white;
-    width: 100px;
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: bold;
-    height: 30px;
-    margin-bottom: 20px;
-}
-#total > #cpnbtn:hover{
-border: solid #304FFE;
-color: #304FFE;
-background-color: white;
-}
-#cpn-list{
-    font-size: 18px;
-    font-weight: bold;
-}
-#cpn-list > img{
-    width: 40px;
-    margin-right: 20px;
-}
-#total > div > h5{
-    font-size: 16px;
-    font-weight: bold;
-    margin-top: 30px;
-}
-#total > div{
-    width: 70%;
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-    padding: 10px;
-    /* margin: auto; */
-}
-.detail{
+#login > #num{
     width: 300px;
-    height: 50px;
-    border: solid white;
-    text-align: left;
+    height: 30px;
+    border-radius: 5px;
+    border:solid #c31717 ;
+    margin-bottom:20px ;
+    font-size: 18px;
     font-weight: bold;
-    font-size: 15px;
-    border: none;
-    margin-bottom: 20px;
 }
-.detail{
+#btn{
     border: none;
-}
-#total{
-    padding: 20px;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-}
-#payment{
-    border: none;
-    display: block;
+    border-radius: 5px;
+    width: 120px;
     margin: auto;
-    background-color: #304FFE;
-    color: white;
-    width: 200px;
     height: 30px;
     font-size: 18px;
     font-weight: bold;
-    border-radius: 5px;
+    background-color: rgb(0, 179, 255);
+    color: white;
 }
-#payment:hover{
+#btn:hover{
+    border: solid rgb(0, 179, 255);
     background-color: white;
-    border: solid #304FFE;
-    color: #304FFE;
+    color: rgb(0, 179, 255);
 }
-#cap{
-    font-weight: bold;
-    color: #263238;
-    margin-left: 10px;
-    padding-left: 20px;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
-}
-#total > h4{
-    font-weight: bold;
-} 
-#add-more{
-    display: block;
-    font-size: 16px;
+#can{
+    border: none;
+    border-radius: 5px;
+    width: 120px;
+    margin: auto;
+    margin-left:20px ;
+    height: 30px;
+    font-size: 18px;
     font-weight: bold;
     background-color: #c31717;
-    border: none;
-    border-radius: 5px;
-    width: 100px;
-    height: 30px;
     color: white;
 }
-#add-more:hover{
-    background-color:white;
+#can:hover{
     border: solid #c31717;
+    background-color: white;
     color: #c31717;
 }
-#spn{
-    font-size: 12px;
-    font-weight: bold;
-    color: #c31717;
-  }
-    </style>
-</head>
+</style>
 <body>
-    <div id="top-carousel">
+     <div id="top-carousel">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="item active">
-                <p style="width:100%;">SHOP ON SITE GET AMAZING DISCOUNTS.</P>
-            </div>
-            <div class="item">
-                <p style="width:100%;">ADDITIONAL 10% OFF SITE WIDE ON MINIMUM VALUE OF  ₹1500. USE CODE: Extra10.</P>
-            </div>
+              <p style="width:100%;">SHOP ON SITE GET AMAZING DISCOUNTS.</P>
+          </div>
+          <div class="item">
+              <p style="width:100%;">ADDITIONAL 10% OFF SITE WIDE ON MINIMUM VALUE OF  ₹1500. USE CODE: Extra10.</P>
+          </div>
           </div>
           <a  href="#myCarousel" data-slide="prev">
           </a>
           <a  href="#myCarousel" data-slide="next">
           </a>
         </div>
-              
-</div>
+    </div>
 <div id="nav">
    <div id="cat">
     <div class="dropdown">
         <button class="dropbtn">MEN</button>
         <div class="dropdown-content">
-          <a href="./products.html">VIEW ALL</a>
+          <a href="#">VIEW ALL</a>
           <a href="#">JEANS</a>
           <a href="#">APPAREL</a>
           <a href="#">SHOES</a>
@@ -498,7 +399,7 @@ background-color: white;
       <div class="dropdown">
         <button class="dropbtn">WOMEN</button>
         <div class="dropdown-content">
-          <a href="./products.html">VIEW ALL</a>
+          <a href="#">VIEW ALL</a>
           <a href="#">JEANS</a>
           <a href="#">APPAREL</a>
           <a href="#">SHOES</a>
@@ -508,7 +409,7 @@ background-color: white;
       <div class="dropdown">
         <button class="dropbtn">KID</button>
         <div class="dropdown-content">
-          <a href="./products.html">VIEW ALL</a>
+          <a href="#">VIEW ALL</a>
           <a href="#">JEANS</a>
           <a href="#">APPAREL</a>
         </div>
@@ -516,7 +417,7 @@ background-color: white;
       <div class="dropdown">
         <button id="ss" class="dropbtn">SS'23</button>
         <div class="dropdown-content">
-          <a href="/products.html">VIEW ALL</a>
+          <a href="#">VIEW ALL</a>
           <a href="#">MEN</a>
           <a href="#">WOMEN</a>
         </div>
@@ -524,7 +425,7 @@ background-color: white;
       <div class="dropdown">
         <button class="dropbtn">SPORT</button>
         <div class="dropdown-content">
-          <a href="./products.html">VIEW ALL</a>
+          <a href="#">VIEW ALL</a>
           <a href="#">MEN</a>
           <a href="#">WOMEN</a>
         </div>
@@ -544,46 +445,48 @@ background-color: white;
     <h1 >CLOSET</h1>
    </div>
    <div id="opt">
-    <span id="spn">Logout</span>
         <table id="opttable">
             <tr>
-            <td> <a href="./index.html"><img src="./images/profile-people-account-svgrepo-com.svg" alt=""></a></td>
-            <td> <a href=""><img src="./images/search-svgrepo-com.svg" alt=""></a></td>
-            <td> <a href=""><img src="./images/question-mark-circled-svgrepo-com.svg" alt=""></a> </td>
-            <td> <a href=""><img src="./images/heart-svgrepo-com.svg" alt=""></a> </td>
-            <td> <a href="./cart.html"><img src="./images/cart-2-svgrepo-com.svg" alt=""></a> </td>
+            <td> <a href=""><img src="./images/profile-people-account-svgrepo-com.svg" alt=""></a></td>
+            <td> <a href="" id="err1"><img src="./images/search-svgrepo-com.svg" alt=""></a></td>
+            <td> <a href="" id="err2"><img src="./images/question-mark-circled-svgrepo-com.svg" alt=""></a> </td>
+            <td> <a href="" id="err3"><img src="./images/heart-svgrepo-com.svg" alt=""></a> </td>
+            <td> <a href="" id="err4"><img src="./images/cart-2-svgrepo-com.svg" alt=""></a> </td>
             </tr>
         </table>   
     </div>
 </div>
-<h2 id="cap">Cart</h2>
-<div id="container">
-<div id="cart-container">
-</div>
-<div id="total">
-    <h3>Total Cart Value : <span id="cart-total">0</span></h3>
-    <h4>Total Products : <span id="tot-prod">0</span> </h4>
-    <button id="add-more">Add More</button><br>
-    <input type="text" placeholder="Enter coupen code" id="cpn">
-    <button id="cpnbtn">Apply</button>
-    <ul id="cpn-list"><img src="./images/discount-price-sale-svgrepo-com.svg" alt=""> Available coupons
-        <li>New30</li>
-        <li>Extra10</li>
-    </ul>
-    <div>
-        <h5>Cart Details</h5>
-        <table class="detail">
-            <tr class="detail"><td class="detail">Total Cart Value : </td><td class="detail" id="total-bag">0</td></tr>
-            <tr class="detail"><td class="detail">Discount on Cart : </td><td class="detail" id="discount">0</td></tr>
-            <tr class="detail"><td class="detail">Total Amount</td><td class="detail" id="total-amt">0</td></tr>
-        </table>
-        <button id="payment">Make Payment</button>
-    </div>
-</div>
+<div id="login">
+    <input type="number" placeholder="Enter Your Phone Number" id="num"><br>
+    <button id="btn">Login</button><button id="can">Cancel</button>
 </div>
 </body>
 <footer>
     <div id="footer">
+        <div id="signin-connect-us">
+            <div id="signin">
+                <div id="sign">
+                    <h3>Signup to Never Miss an Update</h3>
+                <input type="emai" placeholder="Enter your Email-Id" id="email" required><br>
+                <input type="radio" id="male" name="fav_language" value="MALE">
+                <label for="html">MALE</label>
+                <input type="radio" id="female" name="fav_language" value="FEMALE">
+                <label for="css">FEMALE</label><br>
+                <p style="font-size: 11px;padding-top: 15px;padding-bottom: 15px;">By clicking Sign up you have read and agreed to our <a style="text-decoration: underline;color: white;" href="">privacy policy</a></p>
+                <button id="signup-btn">SIGNUP</button>
+                </div>
+            </div>
+            <div id="connect">
+                <div id="conn">
+                    <h3>Connect With Us On Social Media</h3>
+                    <div>
+                        <img src="./images/instagram-svgrepo-com.svg" alt="">
+                        <img src="./images/facebook-svgrepo-com.svg" alt="">
+                        <img src="./images/youtube-svgrepo-com.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
         <div id="footer-drop">
             <div class="foot-dropdown">
                 <button onclick="myFunction1()" class="foot-dropbtn">HELP <i class="fa fa-caret-down"></i></button>
@@ -624,92 +527,30 @@ background-color: white;
     </div>
 </footer>
 <script>
-     let cart = JSON.parse(localStorage.getItem("cart"))||[]
-    let cartCont = document.getElementById("cart-container")
-    let amount=0
-    function displayProduct(){
-      cartCont.innerHTML=""
-      cart.forEach((ele)=> {
-        let card = document.createElement("div")
-        let details = document.createElement("div")
-        let image =document.createElement("img")
-        let title = document.createElement("h3")
-        let price = document.createElement("h4")
-        let remove = document.createElement("button")
-        let inc = document.createElement("button")
-        inc.style.backgroundColor='white';
-        inc.style.cssText='color:blue'
-        let dec = document.createElement("button")
-        let qty = document.createElement("span")
-        image.setAttribute("src",ele.img)
-        title.textContent=`${ele.brand}  ${ele.gender}'s ${ele.category}`
-        price.textContent=`₹${ele.price}`
-        qty.textContent=ele.qty
-        remove.textContent="Remove"
-        inc.textContent="+"
-        dec.textContent="-"
-
-        remove.addEventListener("click" , ()=>{
-         cart=cart.filter((prod)=>{
-          return prod.id!==ele.id
-         });
-         localStorage.setItem("cart",JSON.stringify(cart))
-         displayProduct() 
-        });
-        inc.addEventListener("click", ()=>{
-          ele=ele.qty++
-          localStorage.setItem("cart",JSON.stringify(cart))
-         displayProduct() 
-        });
-        dec.addEventListener("click", ()=>{
-          if(ele.qty>1){
-          ele=ele.qty--
-          localStorage.setItem("cart",JSON.stringify(cart))
-         displayProduct() 
-          }
-        });
-        let sum=0
-        for(let i=0;i<cart.length;i++){
-          sum+=cart[i].qty*cart[i].price
-        }
-        amount=sum
-        document.getElementById("cart-total").innerText=sum
-        document.getElementById("total-bag").innerText=sum
-        document.getElementById("total-amt").innerText=sum
-        document.getElementById("tot-prod").innerText=cart.length
-        card.append(image)
-       details.append(title,price,inc,qty,dec,remove)
-       cartCont.append(card,details)
-      });
+    let num = document.getElementById("num")
+document.getElementById("btn").addEventListener("click",()=>{
+    if(num.value==""){
+        alert("Fill the text box with phone number")
     }
-    displayProduct()
-    let count=1
-    let cpn = document.getElementById("cpn")
-    let cpnbtn = document.getElementById("cpnbtn")
-    cpnbtn.addEventListener("click",()=>{
-        if(cpn.value=="New30" && count==1){
-        document.getElementById("cart-total").innerText=Math.floor(amount*0.7)
-        document.getElementById("discount").textContent=Math.floor(amount*0.3)
-        document.getElementById("total-amt").textContent=Math.floor(amount*0.7)
-        
-    }else if(cpn.value=="Extra10" && count==1){
-        document.getElementById("cart-total").innerText=Math.floor(amount*0.9)
-        document.getElementById("discount").textContent=Math.floor(amount*0.1)
-        document.getElementById("total-amt").textContent=Math.floor(amount*0.9)
-        
-    }else{
-        document.getElementById("cart-total").innerText=amount
-        document.getElementById("discount").textContent=amount*0
-        document.getElementById("total-amt").textContent=amount
-       
+    else{
+    window.location.href="./products.html"
+    alert("Login Successful!")
     }
-    })
-    document.getElementById("payment").addEventListener("click",()=>{
-        window.location.href="./checkout.html"
-        localStorage.removeItem("cart")
-    })
-    document.getElementById("add-more").addEventListener("click",()=>{
-        window.location.href="./products.html"
-    })
+})
+document.getElementById("err1").addEventListener("click",()=>{
+  alert("Login First")
+})
+document.getElementById("err2").addEventListener("click",()=>{
+  alert("Login First")
+})
+document.getElementById("err3").addEventListener("click",()=>{
+  alert("Login First")
+})
+document.getElementById("err4").addEventListener("click",()=>{
+  alert("Login First")
+})
+document.getElementById("can").addEventListener("click",()=>{
+ window.location.href="./index.html"
+})
 </script>
 </html>
