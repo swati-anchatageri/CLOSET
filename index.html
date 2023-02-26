@@ -316,6 +316,78 @@
     gap: 20px;
     padding-top: 10px;
 }
+#mid-cont{
+  display: grid;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  grid-template-columns: repeat(5,1fr);
+  gap: 20px;
+}
+#mid-cont > div{
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+}
+#mid-cont >div > img{
+  width: 100%;
+}
+#mid-cont h3{
+  font-weight: bold;
+}
+#cats{
+  display: grid;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  grid-template-columns: repeat(2,1fr);
+  gap: 10px;
+}
+#cats > div{
+  width: 90%;
+  position: relative;
+  margin: auto;
+  text-align: center;
+  height: 300px;
+}
+#cats > div > h2{
+  position: absolute;
+  top: 120px;
+  left: 200px;
+  color: white;
+  font-weight: bold; 
+}
+#cats > div > img{
+  width: 100%;
+  height: 100%;
+}
+#services{
+  display: grid;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+  grid-template-columns: repeat(4,1fr);
+  gap: 10px;
+}
+#services > div{
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  }
+  #services > div > img{
+    width: 20%;
+  }
+  #services > div > h3{
+    font-weight: bold;
+  }
+  #spn{
+    font-size: 12px;
+    font-weight: bold;
+    color: #c31717;
+  }
 </style>
 <body>
 
@@ -341,7 +413,7 @@
             <div class="dropdown">
                 <button class="dropbtn">MEN</button>
                 <div class="dropdown-content">
-                  <a href="./products.html">VIEW ALL</a>
+                  <a href="#">VIEW ALL</a>
                   <a href="#">JEANS</a>
                   <a href="#">APPAREL</a>
                   <a href="#">SHOES</a>
@@ -351,7 +423,7 @@
               <div class="dropdown">
                 <button class="dropbtn">WOMEN</button>
                 <div class="dropdown-content">
-                  <a href="./products.html">VIEW ALL</a>
+                  <a href="#">VIEW ALL</a>
                   <a href="#">JEANS</a>
                   <a href="#">APPAREL</a>
                   <a href="#">SHOES</a>
@@ -361,7 +433,7 @@
               <div class="dropdown">
                 <button class="dropbtn">KID</button>
                 <div class="dropdown-content">
-                  <a href="./products.html">VIEW ALL</a>
+                  <a href="#">VIEW ALL</a>
                   <a href="#">JEANS</a>
                   <a href="#">APPAREL</a>
                 </div>
@@ -369,7 +441,7 @@
               <div class="dropdown">
                 <button id="ss" class="dropbtn">SS'23</button>
                 <div class="dropdown-content">
-                  <a href="/products.html">VIEW ALL</a>
+                  <a href="#">VIEW ALL</a>
                   <a href="#">MEN</a>
                   <a href="#">WOMEN</a>
                 </div>
@@ -377,7 +449,7 @@
               <div class="dropdown">
                 <button class="dropbtn">SPORT</button>
                 <div class="dropdown-content">
-                  <a href="./products.html">VIEW ALL</a>
+                  <a href="#">VIEW ALL</a>
                   <a href="#">MEN</a>
                   <a href="#">WOMEN</a>
                 </div>
@@ -397,13 +469,14 @@
             <h1 >CLOSET</h1>
            </div>
            <div id="opt">
+            <span id="spn">Login</span>
                 <table id="opttable">
                     <tr>
-                    <td> <a href=""><img src="./images/profile-people-account-svgrepo-com.svg" alt=""></a></td>
-                    <td> <a href=""><img src="./images/search-svgrepo-com.svg" alt=""></a></td>
-                    <td> <a href=""><img src="./images/question-mark-circled-svgrepo-com.svg" alt=""></a> </td>
-                    <td> <a href=""><img src="./images/heart-svgrepo-com.svg" alt=""></a> </td>
-                    <td> <a href="./cart.html"><img src="./images/cart-2-svgrepo-com.svg" alt=""></a> </td>
+                    <td> <a href="./login.html"><img src="./images/profile-people-account-svgrepo-com.svg" alt=""></a></td>
+                    <td> <a href="" id="err1"><img src="./images/search-svgrepo-com.svg" alt=""></a></td>
+                    <td> <a href="" id="err2"><img src="./images/question-mark-circled-svgrepo-com.svg" alt=""></a> </td>
+                    <td> <a href="" id="err3"><img src="./images/heart-svgrepo-com.svg" alt=""></a> </td>
+                    <td> <a href="" id="err4"><img src="./images/cart-2-svgrepo-com.svg" alt=""></a> </td>
                     </tr>
                 </table>   
             </div>
@@ -420,7 +493,7 @@
                     <div class="carousel-inner">
 
                         <div class="item active">
-                        <a href="/products.html"><img src="./images/1.jpg" alt="Los Angeles" style="width:100%;height:500px;"></a>
+                        <a href="" id="err5"><img src="./images/1.jpg" alt="Los Angeles" style="width:100%;height:500px;"></a>
                         <div class="carousel-caption">
                             <h2>New Generation of Denim</h2>
                             <h4>Just Launched SS'23 Collectin</h4>
@@ -429,7 +502,7 @@
                         </div>
                 
                         <div class="item">
-                        <a href="/products.html"><img src="./images/1.jpg" alt="Chicago" style="width:100%;height:500px;"></a>
+                        <a href="" id="err6"><img src="./images/1.jpg" alt="Chicago" style="width:100%;height:500px;"></a>
                         <div class="carousel-caption">
                             <h2>New Generation of Denim</h2>
                             <h4>Just Launched SS'23 Collectin</h4>
@@ -438,7 +511,7 @@
                         </div>
                     
                         <div class="item">
-                        <a href="/products.html"><img src="./images/1.jpg" alt="New York" style="width:100%;height:500px;"></a>
+                        <a href="" id="err7"><img src="./images/1.jpg" alt="New York" style="width:100%;height:500px;"></a>
                         <div class="carousel-caption">
                             <h2>New Generation of Denim</h2>
                             <h4>Just Launched SS'23 Collectin</h4>
@@ -451,14 +524,82 @@
                     </a>
                     <a href="#myCarousel" data-slide="next">
                     </a>
+                  </div>
                 </div>
-            </div>
-            <div>
-                <p>most wanted</p>
-            </div>
-            <div>
-
-            </div>
+        </div>
+        <div id="mid-cont">
+          <div>
+            <img src="https://diesel.gumlet.io/banner/1676538824SS23%20DROP2_LOOKBOOK%20&%20OPC%20SELL%20OUT%20CROPS_DENIM_%20DNA%20WASHES%20_1_1_HOLIDAYS-5_2.webp?compress=true&q=70" alt="">
+            <h3>Men's Jeans</h3>
+          </div>
+          <div>
+            <img src="https://diesel.gumlet.io/banner/1676539252SS23%20DROP2_LOOKBOOK%20&%20OPC%20SELL%20OUT%20CROPS_DENIM_%20DNA%20WASHES%20_1_1_SS23DROP2-9_2.webp?compress=true&q=70" alt="">
+            <h3>Women's Jeans</h3>
+          </div>
+          <div>
+            <img src="https://diesel.gumlet.io/banner/1676539197SS23%20DROP2_LOOKBOOK%20&%20OPC%20SELL%20OUT%20CROPS_REHAB%20DENIM_1_1_SS23DROP2-22_2.webp?compress=true&q=70" alt="">
+            <h3>Backpacks</h3>
+          </div>
+          <div>
+            <img src="https://diesel.gumlet.io/banner/1676538824SS23%20DROP2_LOOKBOOK%20&%20OPC%20SELL%20OUT%20CROPS_DENIM_%20DNA%20WASHES%20_1_1_HOLIDAYS-5_2.webp?compress=true&q=70" alt="">
+            <h3>Men's Apparel</h3>
+          </div>
+          <div>
+            <img src="https://diesel.gumlet.io/banner/1676539252SS23%20DROP2_LOOKBOOK%20&%20OPC%20SELL%20OUT%20CROPS_DENIM_%20DNA%20WASHES%20_1_1_SS23DROP2-9_2.webp?compress=true&q=70" alt="">
+            <h3>Women's Apparel</h3>
+          </div>
+        </div>
+        <div id="cats">
+          <div>
+            <img src="https://i.pinimg.com/736x/64/3d/3e/643d3e41866195ba34795dc7e0b49d50.jpg" alt="">
+            <h2> T-shirts</h2>
+          </div>
+          <div>
+            <img src="https://i.pinimg.com/736x/16/70/74/1670747caa6430afa2b509cc0d8580a1.jpg" alt="">
+            <h2>Jeans</h2>
+          </div>
+          <div>
+            <img src="https://i.pinimg.com/736x/16/70/74/1670747caa6430afa2b509cc0d8580a1.jpg" alt="">
+            <h2>Denim</h2>
+          </div>
+          <div>
+            <img src="https://i.pinimg.com/736x/64/3d/3e/643d3e41866195ba34795dc7e0b49d50.jpg" alt="">
+            <h2>T-shirts</h2>
+          </div>
+        </div>
+        <div id="services">
+          <div>
+            <img src="https://www.svgrepo.com/show/357440/calling.svg" alt="">
+            <h3>Personalized Calling</h3>
+          </div>
+          <div>
+            <img src="https://www.svgrepo.com/show/457103/arrow-return.svg" alt="">
+            <h3>Easy Return</h3>
+          </div>
+          <div>
+            <img src="https://www.svgrepo.com/show/470919/verified.svg" alt="">
+            <h3>Authentic Products</h3>
+          </div>
+          <div>
+            <img src="https://www.svgrepo.com/show/355226/secure.svg" alt="">
+            <h3>Flexible and Secure Payments</h3>
+          </div>
+          <div>
+            <img src="https://www.svgrepo.com/show/503374/help-desk-log.svg" alt="">
+            <h3>Life Time Support</h3>
+          </div>
+          <div>
+            <img src="https://www.svgrepo.com/show/505323/cart-3.svg" alt="">
+            <h3>Pre-Order</h3>
+          </div>
+          <div>
+            <img src="https://www.svgrepo.com/show/506817/discount.svg" alt="">
+            <h3>Exclusive Offers</h3>
+          </div>
+          <div>
+            <img src="https://www.svgrepo.com/show/108662/free-delivery-truck.svg" alt="">
+            <h3>Free shipping</h3>
+          </div>
         </div>
     
 </body>
@@ -524,23 +665,10 @@
                 <button class="foot-dropbtn">STORE LOCATOR</button>
             </div>
         </div>
-        <p>Copyright ©️2021 Diesel Fashion India Reliance Pvt.Ltd</p>
+        <p>Copyright ©️2023 CLOSET Fashion India.</p>
     </div>
 </footer>
 <script>
-    window.onscroll = function() {mySticky()};
-    
-    var navbar = document.getElementById("nav");
-    var sticky = navbar.offsetTop;
-    
-    function mySticky() {
-      if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky")
-      } else {
-        navbar.classList.remove("sticky");
-      }
-    }
-
 
 function myFunction1() {
  document.getElementById("foot-myDropdown").classList.toggle("show");
@@ -589,5 +717,29 @@ window.onclick = function(event) {
     }
   }
 }
+
+document.getElementById("err1").addEventListener("click",()=>{
+  alert("Login First")
+})
+document.getElementById("err2").addEventListener("click",()=>{
+  alert("Login First")
+})
+document.getElementById("err3").addEventListener("click",()=>{
+  alert("Login First")
+})
+document.getElementById("err4").addEventListener("click",()=>{
+  alert("Login First")
+})
+document.getElementById("err5").addEventListener("click",()=>{
+  alert("Login First")
+})
+document.getElementById("err6").addEventListener("click",()=>{
+  alert("Login First")
+})
+document.getElementById("err7").addEventListener("click",()=>{
+  alert("Login First")
+})
+
+
     </script>
 </html>
